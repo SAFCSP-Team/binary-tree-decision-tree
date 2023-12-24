@@ -55,7 +55,7 @@ public class Node {
 1 - In `BinaryTree` class, create `Preorder` traversal function. 
 
 In the code you can see the first employee `e` is already created with the below informatio:  
-Employee e: id: 01, name: Ahmed, role: CEO.
+Employee e: id=01, name=Ahmed, role=CEO.
 ```java
 Employee e = new Employee(01,"Ahmed","CEO");
 ````
