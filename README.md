@@ -1,4 +1,4 @@
-# binary Tree non premitive project
+# binary tree with non premitive data type project
 
 ### Objective
 In this project, our objective is to understand the implementation of the binary tree, how to access the tree nodes, and perform operations on them.
