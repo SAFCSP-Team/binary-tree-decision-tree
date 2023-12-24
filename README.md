@@ -54,10 +54,10 @@ public class Node {
 
 1 - In `BinaryTree` class, create `Preorder` traversal function. 
 
-2 - In `main` creat a tree and add the below nodes that have information about the employees:
-- Employee e1: id: 02, name: Ali, role: IT Managaer.
-- Employee e2: id: 03, name: Abdullah, role: HR Manager.
-- Employee e3: id: 04, name: Mohammed, role: Software Developer.
+2 - In `main` create objects of employee data type that have the below informations:
+- Employee e1: id=02, name=Ali, role=IT Managaer.
+- Employee e2: id=03, name=Abdullah, role=HR Manager.
+- Employee e3: id=04, name=Mohammed, role=Software Developer.
 
 In the code you can see the `root` is already created with the below informatio:
 
