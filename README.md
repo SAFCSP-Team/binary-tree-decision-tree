@@ -1,7 +1,7 @@
 # binary Tree non premitive project
 
 ### Objective
-In this project, our objective is to create a tree of employees.
+In this project, our objective is to understand the implementation of the binary tree, how to access the tree nodes, and perform operations on them.
 
 ### Problem
 Create a tree to store employees.
