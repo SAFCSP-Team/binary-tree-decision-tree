@@ -6,8 +6,8 @@ In this project, our objective is to understand the implementation of the binary
 ### Problem
 Consider we have a start-up company that have small number of employees.   
 They have CEO, 2 managers and 1 software developer.  
-Anas is the CEO and has 2 managers under him, Ali as the IT manager and abdullah as the HR manager.   
-Ali has one software under him and his name is mohammed.
+Anas is the CEO and has 2 managers under him, Ali as the IT manager and Abdullah as the HR manager.   
+Ali has one software under him and his name is Mohammed.
 
 this is a perfect problem to slove it using binary tree, we can represent the company structure as the below image:
 
