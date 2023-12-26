@@ -4,16 +4,15 @@
 In this project, our objective is to understand the implementation of the binary tree, how to access the tree nodes, and perform operations on them.
 
 ### Problem
+Consider we have a start-up company that have small number of employees.   
+They have CEO, 2 managers and 1 software developer.  
+Anas is the CEO and has 2 managers under him, Ali as the IT manager and abdullah as the HR manager.   
+Ali has one software under him and his name is mohammed.
 
-Consider we have a start-up company that have small number of employees. They have CEO, 2 managers and 1 software developer.
 this is a perfect problem to slove it using binary tree, we can represent the company structure as the below image:
 
 ![data representation](./Binary-tree-project.jpg)
 
-
-
-
-Create a tree to store employees.
 
 ### Implementation
 Using Java programming language: 
