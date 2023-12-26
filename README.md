@@ -8,8 +8,7 @@ In this project, our objective is to understand the implementation of the binary
 Consider we have a start-up company that have small number of employees. They have CEO, 2 managers and 1 software developer.
 this is a perfect problem to slove it using binary tree, we can represent the company structure as the below image:
 
-Figure 1
-![data representation](./images/Types-of-binary-tree.jpg)
+![data representation](./Binary-tree-project.jpg)
 
 
 
