@@ -1,168 +1,180 @@
-# binary tree with non premitive data type project
+# binary tree - Decision tree
 
 ### Objective
-In this project, our objective is to understand the implementation of the binary tree, how to access the tree nodes, and perform operations on them.
+In this project, our objective is to understand how to build the decesion tree, how to define the decesion based on specific questions.
 
 ### Problem
-Consider we have a start-up company that have small number of employees.   
-They have CEO, 2 managers and 1 software developer.  
-Anas is the CEO and has 2 managers under him, Ali as the IT manager and Abdullah as the HR manager.   
-Ali has one software developer under him and his name is Mohammed.
+Create a decesion tree to decide whether to accept the job offer or not.
 
-This is a perfect problem to slove it using binary tree, we can represent the company structure as the below image:
+- Ahmed received a job offer and he has some question to be asked before he can decide to accept the offer or not:
+Is the salary above 10,000 SAR?
+Is the office near my hosue?
+Is the work enivironment convenient?
 
-![data representation](./Binary-tree-project.jpg)
+If the above questions answered with a 'yes' Ahmed will accept the offer otherwise he will rejects the job offer.
+
+- Decesion tree for the above questions should be the same as below (Figuer 1):
+
+Figuer 1
+
 
 
 ### Implementation
 Using Java programming language: 
 
-- `Employee` class is already implemented and added to the BinartTree class as the below:
+- `Node` class is already implemented and added to the DecesionTree java file as the below:
 ```java
+class Node {
 
-public class Employee {
+    String question;
 
-    int id;
-    String name;
-    String role;
+    Node right;
+    Node left;
 
-    Employee(int id, String name, String role){
-        this.id = id;
-        this.name = name;
-        this.role = role;
+    public Node(String question) {
+        this.question = question;
+        this.right = null;
+        this.left = null;
     }
-  
 }
 
 ```
 
 
-- `Node` class is already implemented and added to the BinartTree class as the below:
+- `DecesionTree` class is already implemented and added to the DecesionTree java file as the below:
 ```java
 
+public class DecisionTree {
 
-// Node creation
-public class Node {
-  Employee data;
-  Node left;
-  Node right;
+    Node root;
 
-  public Node(Employee e) {
-  data = e;
-  left = null;
-  right = null;
-  }
-
-}
-```
-
-
-
-- `BinaryTree` class is where you will perform the below requirements:  
-
-1 - In `BinaryTree` class, create `Preorder` traversal function. 
-
-<br/>
-
-In `main` you can see the first employee `e` is already created with the below informatio:  
-Employee `e`: id=01, name=Ahmed, role=CEO.
-```java
-Employee e = new Employee(01,"Ahmed","CEO");
-````
-
-2 - In `main` create objects of employee data type that have the below informations:
-- Employee `e1`: id=02, name=Ali, role=IT Managaer.
-- Employee `e2`: id=03, name=Abdullah, role=HR Manager.
-- Employee `e3`: id=04, name=Mohammed, role=Software Developer.    
-
-<br/>
-
-3 - Create the root node
-- use `tree.root` to create the root and store the object `e`.
-
-<br/>
-
-4 - Output of this projects should be the same as below:
-- Output:
-```
-Pre order Traversal: 
- id: 1 name: Ahmed Role: CEO
- id: 2 name: Ali Role: IT Managaer
- id: 4 name: Mohammed Role: Software Developer
- id: 3 name: Abdullah Role: HR Manager
-
-In order Traversal: 
- id: 4 name: Mohammed Role: Software Developer
- id: 2 name: Ali Role: IT Managaer
- id: 1 name: Ahmed Role: CEO
- id: 3 name: Abdullah Role: HR Manager
-
-Post order Traversal: 
- id: 4 name: Mohammed Role: Software Developer
- id: 2 name: Ali Role: IT Managaer
- id: 3 name: Abdullah Role: HR Manager
- id: 1 name: Ahmed Role: CEO
-```
-
-<br/>
-
-```java
-public class BinaryTree {
-  Node root;
-
-  BinaryTree(Employee e) {
-  root = new Node(e);
-  }
-
-  BinaryTree() {
-  root = null;
-  }
-
-  // Traverse Inorder
-  public void traverseInOrder(Node node) {
-    if (node != null) {
-      traverseInOrder(node.left);
-      System.out.println(" id: " + node.data.id+ " name: " + node.data.name + " Role: " + node.data.role) ;
-      traverseInOrder(node.right);
-    }
-    }
-  
-    // Traverse Postorder
-    public void traversePostOrder(Node node) {
-    if (node != null) {
-      traversePostOrder(node.left);
-      traversePostOrder(node.right);
-      System.out.println(" id: " + node.data.id+ " name: " + node.data.name + " Role: " + node.data.role) ;
-    }
-    }
-  
-    // Traverse Preorder
-    public void traversePreOrder(Node node) {
-
-    // ** 1- add your code here ** //
-
+    public DecisionTree(Node root) {
+        this.root = root;
     }
 
-    public static void main(String[] args) {
-        BinaryTree tree = new BinaryTree();
-      
-        Employee e = new Employee(01,"Ahmed","CEO");
-    // ** 2- add your code here ** //
+    public void addRight(Node root, String parentQu, String newNodeData) {
 
-    // ** 3- add your code here ** //
-        tree.root.left = new Node(e1);
-        tree.root.right = new Node(e2);
-        tree.root.left.left = new Node(e3);
-      
-        System.out.print("Pre order Traversal: ");
-        tree.traversePreOrder(tree.root);
-        System.out.print("\nIn order Traversal: ");
-        tree.traverseInOrder(tree.root);
-        System.out.print("\nPost order Traversal: ");
-        tree.traversePostOrder(tree.root);
+        Node newNode = new Node(newNodeData);
+        Node parent = search(root, parentQu);
+
+        if (parent != null) {
+
+            if (parent.right == null) {
+                parent.right = newNode;
+                System.out.println(newNodeData + " added successfully");
+            } else {
+                System.out.println("parent already has a right child");
+                return;
+            }
+        } else {
+            System.out.println(parentQu + " parent not fount");
         }
 
+    }
 
+    public void addLeft(Node root, String parentQu, String newNodeData) {
+        Node newNode = new Node(newNodeData);
+        Node parent = search(root, parentQu);
+
+        if (parent != null) {
+
+            if (parent.left == null) {
+                parent.left = newNode;
+                System.out.println(newNodeData + " added successfully");
+            } else {
+                System.out.println("parent already has a right child");
+                return;
+            }
+        } else {
+            System.out.println(parentQu + " parent not fount");
+        }
+
+    }
+
+    public Node search(Node root, String target) {
+
+        if (root == null) {
+            System.out.println("Tree is empty");
+            return null;
+        }
+
+        Stack<Node> stack = new Stack<Node>();
+        stack.push(root);
+
+        while (!stack.isEmpty()) {
+            Node currentNode = stack.pop();
+
+            if (currentNode.question == target) {
+                return currentNode;
+            }
+
+            if (currentNode.right != null) {
+                stack.push(currentNode.right);
+            }
+
+            if (currentNode.left != null) {
+                stack.push(currentNode.left);
+            }
+
+        }
+        return null;
+    }
 }
-```
 
+
+```  
+  
+In `main` function perform the following actions:
+
+1 - Creat a DecisionTree object with the root question.
+2 - Add the rest of the questions to complete the tree.
+
+```java
+
+ public static void main(String[] args) {
+
+        /* Add your code here */
+
+        System.out.println("---------------------------------------------");
+
+        currentNode = DT.root;
+        System.out.println(DT.root.question);
+        Scanner scanner = new Scanner(System.in);
+        String userInput = scanner.nextLine();
+        Boolean acceptOffer = true;
+
+        while (currentNode.right != null) {
+
+
+            if ("yes".equalsIgnoreCase(userInput)) {
+
+                currentNode = currentNode.right;
+                System.out.println(currentNode.question);
+                userInput = scanner.nextLine();
+                acceptOffer = true;
+
+            } else if ("no".equalsIgnoreCase(userInput)) {
+
+                acceptOffer = false;
+                break;
+
+
+            } else {
+
+                System.out.println("Invalid input. Please answer with yes or no.");
+
+            }
+
+        }
+        scanner.close();
+
+        if(acceptOffer){
+            System.out.println("Accept the offer");
+        }else {
+            System.out.println("Reject the offer");
+        }
+
+    }
+
+
+```
