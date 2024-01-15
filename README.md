@@ -4,7 +4,7 @@
 In this project, our objective is to understand how to build the decesion tree, how to define the decesion based on specific questions.
 
 ### Problem
-Create a decesion tree to decide whether to accept the job offer or not.
+Create a decision tree to decide whether to accept the job offer or not.
 
 - Ahmed received a job offer and he has some questions to be asked before he can decide to accept the offer or not:   
 Is the salary above 10,000 SAR?   
@@ -13,7 +13,7 @@ Is the work enivironment convenient?
 
 If the above questions answered with a 'yes' Ahmed will accept the offer otherwise he will rejects the offer.
 
-- Decesion tree for the above questions should be the same as below (Figuer 1):
+- Decision tree for the above questions should be the same as below (Figuer 1):
 
 Figuer 1
 
