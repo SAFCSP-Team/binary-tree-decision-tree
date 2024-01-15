@@ -126,7 +126,7 @@ public class DecisionTree {
   
 In `main` function perform the following actions:
 
-1 - Creat a DecisionTree object with the root question.     
+1 - Create a DecisionTree object with the name (DT) and (DT) should hold the root question.   
 2 - Add the rest of the questions to complete the tree.     
 3 - Run the code and try it.
 
