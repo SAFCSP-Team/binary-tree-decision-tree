@@ -6,7 +6,7 @@ In this project, our objective is to understand how to build the decesion tree, 
 ### Problem
 Create a decesion tree to decide whether to accept the job offer or not.
 
-- Ahmed received a job offer and he has some question to be asked before he can decide to accept the offer or not:   
+- Ahmed received a job offer and he has some questions to be asked before he can decide to accept the offer or not:   
 Is the salary above 10,000 SAR?   
 Is the office near my hosue?   
 Is the work enivironment convenient?   
