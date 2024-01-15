@@ -1,4 +1,4 @@
-# binary tree - Decision tree
+# Binary tree - Decision tree
 
 ### Objective
 In this project, our objective is to understand how to build the decesion tree, how to define the decesion based on specific questions.
