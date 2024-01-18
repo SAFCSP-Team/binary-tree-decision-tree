@@ -15,7 +15,8 @@ If the above questions answered with a 'yes' Ahmed will accept the offer otherwi
 
 - Decision tree for the above questions should be the same as below (Figuer 1):
 
-Figuer 1
+Figuer 1    
+<img width="910" alt="Introduction to Arrays-01" src="https://github.com/SAFCSP-Team/data-structures-and-algorithms-bootcamp/blob/main/data-structures-and-algorithms-101/02-data-structures/05-tree/images/Decision-Tree-Example.jpg">
 
 
 
