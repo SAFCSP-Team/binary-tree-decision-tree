@@ -23,10 +23,10 @@ public class DecisionTree {
         this.root = root;
     }
 
-    public void addRight(Node root, String parentQu, String newNodeData) {
+    public void addRight(String parentQu, String newNodeData) {
 
         Node newNode = new Node(newNodeData);
-        Node parent = search(root, parentQu);
+        Node parent = search(parentQu);
 
         if (parent != null) {
 
@@ -43,9 +43,9 @@ public class DecisionTree {
 
     }
 
-    public void addLeft(Node root, String parentQu, String newNodeData) {
+    public void addLeft(String parentQu, String newNodeData) {
         Node newNode = new Node(newNodeData);
-        Node parent = search(root, parentQu);
+        Node parent = search(parentQu);
 
         if (parent != null) {
 
@@ -62,7 +62,7 @@ public class DecisionTree {
 
     }
 
-    public Node search(Node root, String target) {
+    public Node search(String target) {
 
         if (root == null) {
             System.out.println("Tree is empty");
@@ -70,7 +70,7 @@ public class DecisionTree {
         }
 
         Stack<Node> stack = new Stack<Node>();
-        stack.push(root);
+        stack.push(this.root);
 
         while (!stack.isEmpty()) {
             Node currentNode = stack.pop();
