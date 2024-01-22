@@ -43,8 +43,8 @@ class Node {
 
 
 - `DecesionTree` class is already implemented and added to the DecesionTree java file as the below:
-```java
 
+```java
 public class DecisionTree {
 
     Node root;
@@ -53,10 +53,10 @@ public class DecisionTree {
         this.root = root;
     }
 
-    public void addRight(Node root, String parentQu, String newNodeData) {
+    public void addRight(String parentQu, String newNodeData) {
 
         Node newNode = new Node(newNodeData);
-        Node parent = search(root, parentQu);
+        Node parent = search(parentQu);
 
         if (parent != null) {
 
@@ -73,9 +73,9 @@ public class DecisionTree {
 
     }
 
-    public void addLeft(Node root, String parentQu, String newNodeData) {
+    public void addLeft(String parentQu, String newNodeData) {
         Node newNode = new Node(newNodeData);
-        Node parent = search(root, parentQu);
+        Node parent = search(parentQu);
 
         if (parent != null) {
 
@@ -92,15 +92,15 @@ public class DecisionTree {
 
     }
 
-    public Node search(Node root, String target) {
+    public Node search(String target) {
 
         if (root == null) {
             System.out.println("Tree is empty");
             return null;
         }
 
-        Stack<Node> stack = new Stack<Node>();
-        stack.push(root);
+        Stack<Node> stack = new Stack<>();
+        stack.push(this.root);
 
         while (!stack.isEmpty()) {
             Node currentNode = stack.pop();
@@ -120,27 +120,25 @@ public class DecisionTree {
         }
         return null;
     }
-}
-
 
 ```  
   
 In `main` function perform the following actions:
 
-1 - Create a DecisionTree object with the name (DT) and (DT) should hold the root question.   
+1 - Create a DecisionTree object with the name (decisionTree) and (decisionTree) should hold the root question.   
 2 - Add the rest of the questions to complete the tree.     
 3 - Run the code and try it.
 
 ```java
 
- public static void main(String[] args) {
+public static void main(String[] args) {
 
         /* Add your code here */
 
         System.out.println("---------------------------------------------");
 
-        currentNode = DT.root;
-        System.out.println(DT.root.question);
+        Node currentNode = decisionTree.root;
+        System.out.println(decisionTree.root.question);
         Scanner scanner = new Scanner(System.in);
         String userInput = scanner.nextLine();
         Boolean acceptOffer = true;
@@ -177,6 +175,4 @@ In `main` function perform the following actions:
         }
 
     }
-
-
 ```
