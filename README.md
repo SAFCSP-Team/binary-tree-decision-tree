@@ -1,21 +1,21 @@
 # Decision tree
 
 ### Objective
-In this project, our objective is to understand how to build the decesion tree, how to define the decesion based on specific questions.
+In this project, our objective is to understand how to build the decision tree, and how to define the decision based on specific questions.
 
 ### Problem
 Create a decision tree to decide whether to accept the job offer or not.
 
 - Ahmed received a job offer and he has some questions to be asked before he can decide to accept the offer or not:   
 Is the salary above 10,000 SAR?   
-Is the office near my hosue?   
-Is the work enivironment convenient?   
+Is the office near my house?   
+Is the work environment convenient?   
 
-If the above questions answered with a 'yes' Ahmed will accept the offer otherwise he will rejects the offer.
+If the above questions are answered with a 'yes' Ahmed will accept the offer otherwise he will reject the offer.
 
-- Decision tree for the above questions should be the same as below (Figuer 1):
+- Decision tree for the above questions should be the same as below (Figure 1):
 
-Figuer 1    
+Figure 1    
 <img width="910" alt="Introduction to Arrays-01" src="https://github.com/SAFCSP-Team/data-structures-and-algorithms-bootcamp/blob/main/data-structures-and-algorithms-101/02-data-structures/05-tree/images/Decision-Tree-Project.jpg">
 
 
@@ -23,7 +23,7 @@ Figuer 1
 ### Implementation
 Using Java programming language: 
 
-- `Node` class is already implemented and added to the DecesionTree java file as the below:
+- The `Node` class is already implemented and added to the DecesionTree java file as below:
 ```java
 class Node {
 
@@ -42,9 +42,12 @@ class Node {
 ```
 
 
-- `DecesionTree` class is already implemented and added to the DecesionTree java file as the below:
+- The `DecesionTree` class is already implemented and added to the DecesionTree java file as below:
 
 ```java
+import java.util.Scanner;
+import java.util.Stack;
+
 public class DecisionTree {
 
     Node root;
@@ -94,7 +97,7 @@ public class DecisionTree {
 
     public Node search(String target) {
 
-        if (root == null) {
+        if (this.root == null) {
             System.out.println("Tree is empty");
             return null;
         }
