@@ -123,7 +123,7 @@ public class DecisionTree {
 
 ```  
   
-In `main` function perform the following actions:
+In `main` method perform the following actions:
 
 1 - Create a DecisionTree object with the name (decisionTree) and (decisionTree) should hold the root question.   
 2 - Add the rest of the questions to complete the tree.     
