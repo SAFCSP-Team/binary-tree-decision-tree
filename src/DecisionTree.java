@@ -93,7 +93,9 @@ public class DecisionTree {
 
     public static void main(String[] args) {
 
-        /* Add your code here */
+        DecisionTree decisionTree = new DecisionTree(new Node("is the salary above 10k sar?"));
+        decisionTree.addRight("is the salary above 10k sar?", "is the office near my house?");
+        decisionTree.addRight("is the office near my house?", "is the work enviroment convinient?");
 
         System.out.println("---------------------------------------------");
 
